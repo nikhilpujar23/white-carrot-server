@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 async function run() {
-  const uri = "mongodb+srv://nikhilrpujar:12345@cluster0.xfqchgj.mongodb.net/?retryWrites=true&w=majority";
+  const uri = process.env.MongoURI;
  var movies;
   const client = new MongoClient(uri, {
     useNewUrlParser: true,
