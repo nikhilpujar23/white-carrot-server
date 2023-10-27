@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 async function run() {
-  const uri = process.env.MongoURI;
+  const uri = `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@cluster0.xfqchgj.mongodb.net/?retryWrites=true&w=majority`;
  var movies;
   const client = new MongoClient(uri, {
     useNewUrlParser: true,
